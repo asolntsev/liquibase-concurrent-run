@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+  <changeSet author="andrei" id="change-1-create-table">
+    <createTable tableName="bonus">
+      <column name="name" type="varchar2(15)"/>
+      <column name="job" type="varchar2(255)"/>
+      <column name="salary" type="number(255)"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="andrei" id="change-2-add-column">
+    <addColumn tableName="bonus">
+      <column name="created_at" type="timestamp">
+        <constraints nullable="false"/>
+      </column>
+    </addColumn>
+  </changeSet>
+  
+</databaseChangeLog>
